@@ -371,13 +371,6 @@ enum {
     ENROLL_NUM_STATES,
 };
 
-static gboolean
-poll_get_image_cb (gpointer user_data)
-{
-    fpi_ssm_jump_to_state (user_data, ENROLL_GET_IMAGE);
-    return G_SOURCE_REMOVE;
-}
-
 static void
 enroll_run_state (FpiSsm *ssm, FpDevice *device)
 {
@@ -400,7 +393,7 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         if (self->resp_buf[MA_OVERHEAD] != 0x00) {
             fp_dbg ("GetImage not ready (0x%02x), retrying",
                     self->resp_buf[MA_OVERHEAD]);
-            g_timeout_add (100, poll_get_image_cb, ssm);
+            fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         fpi_device_report_finger_status (device, FP_FINGER_STATUS_PRESENT);
@@ -440,16 +433,11 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
             fpi_device_enroll_progress (device, self->enroll_stage,
                                          NULL,
                                          fpi_device_retry_new (FP_DEVICE_RETRY_GENERAL));
-            fpi_device_report_finger_status (device, FP_FINGER_STATUS_NONE);
-            g_timeout_add (1500, poll_get_image_cb, ssm);
+            fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         if (self->enroll_stage < MA_ENROLL_SAMPLES) {
-            /* Pause 1.5 s before polling for next press — no USB activity
-             * during this window so the sensor retains its char buffers.
-             * The pause also forces a natural lift between captures. */
-            fpi_device_report_finger_status (device, FP_FINGER_STATUS_NONE);
-            g_timeout_add (1500, poll_get_image_cb, ssm);
+            fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         /* All samples collected — CMD 0x05 RegModel */
