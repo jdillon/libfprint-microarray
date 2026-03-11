@@ -1,75 +1,81 @@
 # microarray.c — libfprint driver for MicroarrayTechnology MAFP (3274:8012)
 
-## Status: **SKELETON — NOT YET TESTED**
+## Status: **WORKING** ✓
 
-The protocol was fully reverse-engineered from `MicroarrayFingerprintDevice.dll`
-using Ghidra 12.0.4 headless analysis. The command opcodes and packet framing
-are confirmed. The code compiles but has not yet been run against real hardware.
+Enrollment and verify confirmed working on real hardware (2026-03-10).
 
-## What Works (on paper)
+Protocol fully reverse-engineered from `MicroarrayFingerprintDevice.dll` v9.47.11.214
+using Ghidra 12.0.4 headless analysis.
 
-- Packet framing (`ma_build_cmd`) — confirmed from `Sensor::fsm_sendcmd`
-- Response parsing (`ma_parse_response`) — confirmed from checksum/response logic
-- Handshake packet bytes — confirmed from `Sensor::mfm_handshake`
-- All USB command opcodes — confirmed from `Sensor::fsm_sensor_control` and callers
-- Enrollment and verify state machine structure
+## What Works
 
-## What Still Needs Work
+- Enrollment: 6-stage press/lift cycle, stores template to device flash
+- Verify: correct finger matches, wrong finger rejects
+- Finger-present detection via GET_IMAGE polling (CMD 0x01)
+- Press/lift detection between captures via `waiting_for_lift` flag
+- Per-enrollment handshake (CMD 0x23) to reset device session state
+- Device flash clear (CMD 0x0D) at enrollment start to free FID slots
+- FID bitmap parsing (CMD 0x1F) to find first free slot
+- Template storage (CMD 0x06) and retrieval for verify (CMD 0x66)
 
-1. **GetImage retry loop**: CMD 0x01 needs to be polled until resp[0]==0 (finger
-   present). Currently jumps straight past if not ready.
+## Known Limitations / TODOs
 
-2. **FID bitmap parsing**: `ENROLL_RECV_READ_INDEX` needs to scan the 32-byte
-   bitmap returned by CMD 0x1F to find the first free slot.
+1. **CMD 0x0D (Empty) clears ALL templates** at the start of each enrollment.
+   This is necessary because failed enrollments leave stale templates in device
+   flash. The proper fix is to track which FID slot we're writing to and only
+   clear that slot, or to not clear at all if the device has free slots.
 
-3. **Response buffer handling**: The `ma_recv_cb` functions need to parse the
-   response and check `resp[0]` before advancing the SSM.
+2. **Interrupt endpoint (EP 0x82)** not used. Currently polling CMD 0x01 for
+   finger detection. The interrupt endpoint would be more efficient and allow
+   proper finger-on/off events without extra USB traffic.
 
-4. **Handshake response validation**: `mfm_handshake` in the DLL calls
-   `FUN_180006fc0(response, 0x23)` to validate 35 bytes — this function was not
-   decompiled. The handshake receive currently just discards the data.
+3. **"Hold to complete" quirk**: if the user holds their finger without lifting
+   between captures, the `waiting_for_lift` flag will wait for a lift before
+   accepting the next sample. This works correctly in practice.
 
-5. **Identify (1:N search)**: Not yet implemented. CMD 0x66 can search all slots
-   if FID is passed as 0xFFFF (unconfirmed — needs testing).
+4. **Handshake response** is accepted if header bytes EF 01 are present.
+   The Windows driver validates 35 bytes via `FUN_180006fc0` which was not
+   fully decompiled.
 
-6. **Interrupt endpoint (EP 0x82)**: Finger-detect events on the interrupt
-   endpoint are not yet wired up. Currently using polling CMD 0x01.
+5. **Identify (1:N search)** not implemented. CMD 0x66 may support searching
+   all slots with FID=0xFFFF (unconfirmed).
 
-7. **Checksum formula verification**: The checksum bytes in the handshake packet
-   (0xA2) don't match the formula in fsm_sendcmd. May need adjustment.
+## Key Protocol Discoveries (from debugging)
 
-## Integration into libfprint
+- The Windows driver calls `mfm_handshake` (CMD 0x23) at the **start of every
+  enrollment**, not just at device open. Without this, failed enrollments leave
+  the device in a broken session state.
+- The device supports exactly **30 FID slots** (0–29). StoreChar returns 0x18
+  if the slot is out of range.
+- CMD 0x0D (Empty) returns success and clears all 30 slots.
+- The required number of GenChar samples for RegModel is `DAT_180032020 / 3`
+  clamped to [3, 6]. For this device the value is 6.
+- Extra GET_IMAGE calls between GenChars corrupt the device's char buffer state.
+  The `waiting_for_lift` approach must minimize GET_IMAGE polling between captures.
+
+## Build
 
 ```bash
-# Clone libfprint
-git clone https://gitlab.freedesktop.org/libfprint/libfprint
-cd libfprint
+# In the libfprint source tree (~/libfprint):
+cp microarray.c libfprint/drivers/microarray/microarray.c
+ninja -C build libfprint/libfprint-2.so.2.0.0
+sudo cp build/libfprint/libfprint-2.so.2.0.0 /usr/lib64/libfprint-2.so.2.0.0
 
-# Copy driver
-cp /home/jason/tmp/libfprint-driver/microarray.c libfprint/drivers/
-
-# Edit libfprint/drivers/meson.build — add to drivers list:
-#   'microarray',
-
-# Edit libfprint/libfprint/fpi-device-private.h — add extern declaration
-
-# Edit libfprint/libfprint/drivers.h — add to driver list
-
-# Build
-mkdir build && cd build
-meson .. -Ddrivers=microarray,...
-ninja
+# Or use the build script:
+./build.sh
 ```
 
 ## Testing
 
 ```bash
-# Check device is visible
-lsusb | grep 3274
+# Enroll right index finger (6 press/lift cycles)
+fprintd-enroll -f right-index-finger
 
-# Test with fprintd
-fprintd-enroll
-fprintd-verify
+# Verify
+fprintd-verify -f right-index-finger
+
+# Debug logging
+sudo G_MESSAGES_DEBUG=all /usr/libexec/fprintd -t 2>&1
 ```
 
 ## Protocol Reference
