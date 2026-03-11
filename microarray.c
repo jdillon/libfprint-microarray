@@ -73,6 +73,7 @@ struct _FpiDeviceMicroarray
   gint           fid;              /* enrolled fingerprint ID slot */
   guint8        *resp_buf;         /* allocated response buffer    */
   GCancellable  *interrupt_cancellable;
+  gboolean       waiting_for_lift; /* TRUE after each successful capture */
 };
 
 G_DECLARE_FINAL_TYPE (FpiDeviceMicroarray, fpi_device_microarray,
@@ -371,6 +372,13 @@ enum {
     ENROLL_NUM_STATES,
 };
 
+static gboolean
+poll_get_image_cb (gpointer user_data)
+{
+    fpi_ssm_jump_to_state (user_data, ENROLL_GET_IMAGE);
+    return G_SOURCE_REMOVE;
+}
+
 static void
 enroll_run_state (FpiSsm *ssm, FpDevice *device)
 {
@@ -391,11 +399,25 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
 
     case ENROLL_GEN_CHAR:
         if (self->resp_buf[MA_OVERHEAD] != 0x00) {
+            /* No image (finger absent or sensor not ready) */
+            if (self->waiting_for_lift) {
+                /* Finger was just lifted — ready for next press */
+                self->waiting_for_lift = FALSE;
+                fpi_device_report_finger_status (device, FP_FINGER_STATUS_NONE);
+                fp_dbg ("Finger lifted, waiting for next press");
+            }
             fp_dbg ("GetImage not ready (0x%02x), retrying",
                     self->resp_buf[MA_OVERHEAD]);
-            fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
+            g_timeout_add (100, poll_get_image_cb, ssm);
             return;
         }
+        if (self->waiting_for_lift) {
+            /* Finger still down from previous capture — keep waiting */
+            fp_dbg ("Waiting for finger lift...");
+            g_timeout_add (100, poll_get_image_cb, ssm);
+            return;
+        }
+        /* New finger press with valid image — proceed */
         fpi_device_report_finger_status (device, FP_FINGER_STATUS_PRESENT);
         cmd[0] = MA_CMD_GEN_CHAR;
         cmd[1] = (guint8)(self->enroll_stage + 1);
@@ -433,10 +455,13 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
             fpi_device_enroll_progress (device, self->enroll_stage,
                                          NULL,
                                          fpi_device_retry_new (FP_DEVICE_RETRY_GENERAL));
+            self->waiting_for_lift = TRUE;
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         if (self->enroll_stage < MA_ENROLL_SAMPLES) {
+            /* Need more samples — set flag and loop back for next press */
+            self->waiting_for_lift = TRUE;
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
@@ -547,6 +572,7 @@ ma_enroll (FpDevice *device)
     FpiDeviceMicroarray *self = FPI_DEVICE_MICROARRAY (device);
     self->enroll_stage = 0;
     self->fid = -1;
+    self->waiting_for_lift = FALSE;
     FpiSsm *ssm = fpi_ssm_new (device, enroll_run_state, ENROLL_NUM_STATES);
     fpi_ssm_start (ssm, enroll_ssm_done);
 }
@@ -679,6 +705,7 @@ fpi_device_microarray_init (FpiDeviceMicroarray *self)
 {
     self->enroll_stage = 0;
     self->fid = -1;
+    self->waiting_for_lift = FALSE;
     self->resp_buf = g_malloc (MA_RESP_BUF + MA_OVERHEAD + 4);
 }
 
