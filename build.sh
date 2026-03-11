@@ -14,6 +14,10 @@ cp "$DRIVER_SRC" "$DEST"
 echo "==> Building..."
 ninja -C "$BUILD" libfprint/libfprint-2.so.2.0.0
 
+echo "==> Saving build output..."
+REPO_DIR="$(dirname "$(realpath "$0")")"
+cp "$BUILD/libfprint/libfprint-2.so.2.0.0" "$REPO_DIR/build/libfprint-2.so.2.0.0"
+
 echo "==> Installing (requires sudo)..."
 sudo systemctl stop fprintd
 sudo cp "$BUILD/libfprint/libfprint-2.so.2.0.0" /usr/lib64/libfprint-2.so.2.0.0

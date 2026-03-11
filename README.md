@@ -80,4 +80,4 @@ sudo G_MESSAGES_DEBUG=all /usr/libexec/fprintd -t 2>&1
 
 ## Protocol Reference
 
-See `/home/jason/tmp/fingerprint-driver-re.md` for full protocol documentation.
+See `docs/fingerprint-driver-re.md` for full protocol documentation.
