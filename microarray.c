@@ -359,6 +359,8 @@ ma_submit_recv (FpiSsm *ssm, FpDevice *device, gsize expect_len)
  *    done.
  */
 enum {
+    ENROLL_HANDSHAKE,       /* session reset — Windows does this before every enrollment */
+    ENROLL_RECV_HANDSHAKE,
     ENROLL_GET_IMAGE,
     ENROLL_RECV_IMAGE,
     ENROLL_GEN_CHAR,
@@ -386,6 +388,24 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
     guint8 cmd[8];
 
     switch (fpi_ssm_get_cur_state (ssm)) {
+
+    case ENROLL_HANDSHAKE: {
+        guint8 *buf = g_memdup2 (MA_HANDSHAKE_PKT, MA_HANDSHAKE_PKT_LEN);
+        FpiUsbTransfer *t = fpi_usb_transfer_new (device);
+        t->ssm = ssm;
+        fpi_usb_transfer_fill_bulk_full (t, MA_EP_OUT,
+                                         buf, MA_HANDSHAKE_PKT_LEN, g_free);
+        fpi_usb_transfer_submit (t, MA_TIMEOUT_CMD, NULL, cmd_send_cb, ssm);
+        break;
+    }
+
+    case ENROLL_RECV_HANDSHAKE: {
+        FpiUsbTransfer *t = fpi_usb_transfer_new (device);
+        t->ssm = ssm;
+        fpi_usb_transfer_fill_bulk (t, MA_EP_IN, MA_HANDSHAKE_RESP_LEN);
+        fpi_usb_transfer_submit (t, MA_TIMEOUT_CMD, NULL, cmd_recv_cb, ssm);
+        break;
+    }
 
     case ENROLL_GET_IMAGE:
         cmd[0] = MA_CMD_GET_IMAGE;
