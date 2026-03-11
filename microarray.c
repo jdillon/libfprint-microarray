@@ -361,6 +361,8 @@ ma_submit_recv (FpiSsm *ssm, FpDevice *device, gsize expect_len)
 enum {
     ENROLL_HANDSHAKE,       /* session reset — Windows does this before every enrollment */
     ENROLL_RECV_HANDSHAKE,
+    ENROLL_EMPTY,           /* CMD 0x0D — erase stale templates before new enrollment */
+    ENROLL_RECV_EMPTY,
     ENROLL_GET_IMAGE,
     ENROLL_RECV_IMAGE,
     ENROLL_GEN_CHAR,
@@ -406,6 +408,16 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         fpi_usb_transfer_submit (t, MA_TIMEOUT_CMD, NULL, cmd_recv_cb, ssm);
         break;
     }
+
+    case ENROLL_EMPTY:
+        g_message ("microarray: clearing device templates (CMD 0x0D)");
+        cmd[0] = MA_CMD_EMPTY;
+        ma_submit_cmd (ssm, device, cmd, 1);
+        break;
+
+    case ENROLL_RECV_EMPTY:
+        ma_submit_recv (ssm, device, MA_OVERHEAD + 3 + 2);
+        break;
 
     case ENROLL_GET_IMAGE:
         cmd[0] = MA_CMD_GET_IMAGE;
@@ -465,13 +477,15 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
 
     case ENROLL_REG_MODEL:
         /* If GenChar succeeded (resp[0]==0), count sample */
+        g_message ("microarray: ENROLL_REG_MODEL: GenChar resp[0]=0x%02x stage=%d",
+                   self->resp_buf[MA_OVERHEAD], self->enroll_stage);
         if (self->resp_buf[MA_OVERHEAD] == 0x00) {
             self->enroll_stage++;
-            fp_dbg ("Enroll stage %d / %d", self->enroll_stage, MA_ENROLL_SAMPLES);
+            g_message ("microarray: stage %d / %d OK", self->enroll_stage, MA_ENROLL_SAMPLES);
             fpi_device_enroll_progress (device, self->enroll_stage, NULL, NULL);
         } else {
-            fp_dbg ("GenChar failed (0x%02x), retrying stage",
-                    self->resp_buf[MA_OVERHEAD]);
+            g_warning ("microarray: GenChar failed (0x%02x), retrying stage",
+                       self->resp_buf[MA_OVERHEAD]);
             fpi_device_enroll_progress (device, self->enroll_stage,
                                          NULL,
                                          fpi_device_retry_new (FP_DEVICE_RETRY_GENERAL));
@@ -486,6 +500,7 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
             return;
         }
         /* All samples collected — CMD 0x05 RegModel */
+        g_message ("microarray: sending RegModel (CMD 0x05)");
         cmd[0] = MA_CMD_REG_MODEL;
         ma_submit_cmd (ssm, device, cmd, 1);
         break;
@@ -495,13 +510,19 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         break;
 
     case ENROLL_READ_INDEX:
+        g_message ("microarray: ENROLL_READ_INDEX: RegModel resp[0]=0x%02x resp[1]=0x%02x resp[2]=0x%02x",
+                   self->resp_buf[MA_OVERHEAD],
+                   self->resp_buf[MA_OVERHEAD + 1],
+                   self->resp_buf[MA_OVERHEAD + 2]);
         if (self->resp_buf[MA_OVERHEAD] != 0x00) {
+            g_warning ("microarray: RegModel FAILED with 0x%02x", self->resp_buf[MA_OVERHEAD]);
             fpi_ssm_mark_failed (ssm,
                 fpi_device_error_new_msg (FP_DEVICE_ERROR_GENERAL,
                                           "RegModel failed: 0x%02x",
                                           self->resp_buf[MA_OVERHEAD]));
             return;
         }
+        g_message ("microarray: RegModel OK, sending ReadIndex");
         /* CMD 0x1F 0x00 — get FID bitmap */
         cmd[0] = MA_CMD_READ_INDEX;
         cmd[1] = 0x00;
@@ -516,7 +537,10 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
     case ENROLL_STORE_CHAR: {
         /* Find first free FID in bitmap (bits = 1 means IN USE) */
         const guint8 *resp = self->resp_buf + MA_OVERHEAD;
+        g_message ("microarray: ENROLL_STORE_CHAR: ReadIndex resp[0]=0x%02x bitmap[0..3]=0x%02x 0x%02x 0x%02x 0x%02x",
+                   resp[0], resp[1], resp[2], resp[3], resp[4]);
         if (resp[0] != 0x00) {
+            g_warning ("microarray: ReadIndex FAILED with 0x%02x", resp[0]);
             fpi_ssm_mark_failed (ssm,
                 fpi_device_error_new_msg (FP_DEVICE_ERROR_GENERAL,
                                           "ReadIndex failed: 0x%02x", resp[0]));
