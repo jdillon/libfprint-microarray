@@ -45,7 +45,7 @@
 #define MA_CMD_DUP_CHECK    0x6F    /* duplicate-finger check               */
 
 /* Enrolment requires this many successful captures before RegModel */
-#define MA_ENROLL_SAMPLES   4
+#define MA_ENROLL_SAMPLES   6
 
 /* Response buffer: max response is ReadIndex = 35 bytes payload + 9 hdr = 44 */
 #define MA_RESP_BUF         64
