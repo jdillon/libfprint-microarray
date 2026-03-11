@@ -345,23 +345,25 @@ ma_submit_recv (FpiSsm *ssm, FpDevice *device, gsize expect_len)
  * Enroll state machine
  * --------------------------------------------------------------------------
  *
- *  Loop MA_ENROLL_SAMPLES times:
- *    ENROLL_WAIT_FINGER   — interrupt EP 0x82 (or poll CMD 0x01)
- *    ENROLL_GET_IMAGE     — CMD 0x01 → send
- *    ENROLL_RECV_IMAGE    — CMD 0x01 → recv
- *    ENROLL_GEN_CHAR      — CMD 0x02 slot=N → send
- *    ENROLL_RECV_GEN_CHAR — CMD 0x02 → recv; if ok, loop or fall through
+ *  Pre-enrollment:
+ *    ENROLL_HANDSHAKE / RECV      — reset device session
+ *    ENROLL_READ_INDEX_PRE / RECV — CMD 0x1F: read FID bitmap
+ *    ENROLL_EMPTY / RECV          — CMD 0x0D: only if all 30 slots full
  *
- *  Then:
- *    ENROLL_REG_MODEL / RECV
- *    ENROLL_READ_INDEX / RECV  (find free FID)
- *    ENROLL_STORE_CHAR / RECV
- *    done.
+ *  Loop MA_ENROLL_SAMPLES times:
+ *    ENROLL_GET_IMAGE / RECV      — CMD 0x01: poll until finger present
+ *    ENROLL_GEN_CHAR / RECV       — CMD 0x02: extract features into char buffer
+ *
+ *  Complete:
+ *    ENROLL_REG_MODEL / RECV      — CMD 0x05: merge char buffers into template
+ *    ENROLL_STORE_CHAR / RECV     — CMD 0x06: store to self->fid (set in pre-check)
  */
 enum {
-    ENROLL_HANDSHAKE,       /* session reset — Windows does this before every enrollment */
+    ENROLL_HANDSHAKE,            /* session reset — must call before every enrollment */
     ENROLL_RECV_HANDSHAKE,
-    ENROLL_EMPTY,           /* CMD 0x0D — erase stale templates before new enrollment */
+    ENROLL_READ_INDEX_PRE,       /* CMD 0x1F — find free FID slot before starting */
+    ENROLL_RECV_READ_INDEX_PRE,
+    ENROLL_EMPTY,                /* CMD 0x0D — only if no free slot found */
     ENROLL_RECV_EMPTY,
     ENROLL_GET_IMAGE,
     ENROLL_RECV_IMAGE,
@@ -369,8 +371,6 @@ enum {
     ENROLL_RECV_GEN_CHAR,
     ENROLL_REG_MODEL,
     ENROLL_RECV_REG_MODEL,
-    ENROLL_READ_INDEX,
-    ENROLL_RECV_READ_INDEX,
     ENROLL_STORE_CHAR,
     ENROLL_RECV_STORE_CHAR,
     ENROLL_NUM_STATES,
@@ -409,11 +409,41 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         break;
     }
 
-    case ENROLL_EMPTY:
-        g_message ("microarray: clearing device templates (CMD 0x0D)");
+    case ENROLL_READ_INDEX_PRE:
+        cmd[0] = MA_CMD_READ_INDEX;
+        cmd[1] = 0x00;
+        ma_submit_cmd (ssm, device, cmd, 2);
+        break;
+
+    case ENROLL_RECV_READ_INDEX_PRE:
+        ma_submit_recv (ssm, device, MA_OVERHEAD + 35 + 2);
+        break;
+
+    case ENROLL_EMPTY: {
+        /* Check bitmap from pre-enrollment ReadIndex */
+        const guint8 *resp = self->resp_buf + MA_OVERHEAD;
+        if (resp[0] == 0x00) {
+            for (int byte = 0; byte < 4 && self->fid < 0; byte++) {
+                for (int bit = 0; bit < 8; bit++) {
+                    if (!(resp[1 + byte] & (1 << bit))) {
+                        self->fid = byte * 8 + bit;
+                        break;
+                    }
+                }
+            }
+        }
+        if (self->fid >= 0) {
+            g_message ("microarray: FID slot %d free, skipping Empty", self->fid);
+            fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
+            return;
+        }
+        /* No free slots — erase all templates, use slot 0 */
+        g_message ("microarray: no free FID slots, clearing all templates (CMD 0x0D)");
+        self->fid = 0;
         cmd[0] = MA_CMD_EMPTY;
         ma_submit_cmd (ssm, device, cmd, 1);
         break;
+    }
 
     case ENROLL_RECV_EMPTY:
         ma_submit_recv (ssm, device, MA_OVERHEAD + 3 + 2);
@@ -476,8 +506,8 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
      * We do the increment and check at ENROLL_REG_MODEL entry. */
 
     case ENROLL_REG_MODEL:
-        /* If GenChar succeeded (resp[0]==0), count sample */
-        g_message ("microarray: ENROLL_REG_MODEL: GenChar resp[0]=0x%02x stage=%d",
+        /* Check GenChar result and count sample */
+        g_message ("microarray: GenChar resp[0]=0x%02x stage=%d",
                    self->resp_buf[MA_OVERHEAD], self->enroll_stage);
         if (self->resp_buf[MA_OVERHEAD] == 0x00) {
             self->enroll_stage++;
@@ -486,21 +516,18 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         } else {
             g_warning ("microarray: GenChar failed (0x%02x), retrying stage",
                        self->resp_buf[MA_OVERHEAD]);
-            fpi_device_enroll_progress (device, self->enroll_stage,
-                                         NULL,
-                                         fpi_device_retry_new (FP_DEVICE_RETRY_GENERAL));
+            fpi_device_enroll_progress (device, self->enroll_stage, NULL,
+                                        fpi_device_retry_new (FP_DEVICE_RETRY_GENERAL));
             self->waiting_for_lift = TRUE;
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         if (self->enroll_stage < MA_ENROLL_SAMPLES) {
-            /* Need more samples — set flag and loop back for next press */
             self->waiting_for_lift = TRUE;
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
-        /* All samples collected — CMD 0x05 RegModel */
-        g_message ("microarray: sending RegModel (CMD 0x05)");
+        g_message ("microarray: all samples collected, sending RegModel (CMD 0x05)");
         cmd[0] = MA_CMD_REG_MODEL;
         ma_submit_cmd (ssm, device, cmd, 1);
         break;
@@ -509,67 +536,26 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
         ma_submit_recv (ssm, device, MA_OVERHEAD + 3 + 2);
         break;
 
-    case ENROLL_READ_INDEX:
-        g_message ("microarray: ENROLL_READ_INDEX: RegModel resp[0]=0x%02x resp[1]=0x%02x resp[2]=0x%02x",
-                   self->resp_buf[MA_OVERHEAD],
-                   self->resp_buf[MA_OVERHEAD + 1],
-                   self->resp_buf[MA_OVERHEAD + 2]);
+    case ENROLL_STORE_CHAR:
+        /* Check RegModel result */
+        g_message ("microarray: RegModel resp[0]=0x%02x, storing to FID slot %d",
+                   self->resp_buf[MA_OVERHEAD], self->fid);
         if (self->resp_buf[MA_OVERHEAD] != 0x00) {
-            g_warning ("microarray: RegModel FAILED with 0x%02x", self->resp_buf[MA_OVERHEAD]);
+            g_warning ("microarray: RegModel FAILED with 0x%02x",
+                       self->resp_buf[MA_OVERHEAD]);
             fpi_ssm_mark_failed (ssm,
                 fpi_device_error_new_msg (FP_DEVICE_ERROR_GENERAL,
                                           "RegModel failed: 0x%02x",
                                           self->resp_buf[MA_OVERHEAD]));
             return;
         }
-        g_message ("microarray: RegModel OK, sending ReadIndex");
-        /* CMD 0x1F 0x00 — get FID bitmap */
-        cmd[0] = MA_CMD_READ_INDEX;
-        cmd[1] = 0x00;
-        ma_submit_cmd (ssm, device, cmd, 2);
-        break;
-
-    case ENROLL_RECV_READ_INDEX:
-        /* Response: 35 bytes — status(1) + 32-byte bitmap + extra */
-        ma_submit_recv (ssm, device, MA_OVERHEAD + 35 + 2);
-        break;
-
-    case ENROLL_STORE_CHAR: {
-        /* Find first free FID in bitmap (bits = 1 means IN USE) */
-        const guint8 *resp = self->resp_buf + MA_OVERHEAD;
-        g_message ("microarray: ENROLL_STORE_CHAR: ReadIndex resp[0]=0x%02x bitmap[0..3]=0x%02x 0x%02x 0x%02x 0x%02x",
-                   resp[0], resp[1], resp[2], resp[3], resp[4]);
-        if (resp[0] != 0x00) {
-            g_warning ("microarray: ReadIndex FAILED with 0x%02x", resp[0]);
-            fpi_ssm_mark_failed (ssm,
-                fpi_device_error_new_msg (FP_DEVICE_ERROR_GENERAL,
-                                          "ReadIndex failed: 0x%02x", resp[0]));
-            return;
-        }
-        /* bitmap starts at resp[1] (32 bytes = 256 bits = 256 possible FIDs) */
-        self->fid = -1;
-        for (int byte = 0; byte < 32 && self->fid < 0; byte++) {
-            for (int bit = 0; bit < 8; bit++) {
-                if (!(resp[1 + byte] & (1 << bit))) {
-                    self->fid = byte * 8 + bit;
-                    break;
-                }
-            }
-        }
-        if (self->fid < 0) {
-            fpi_ssm_mark_failed (ssm,
-                fpi_device_error_new (FP_DEVICE_ERROR_DATA_FULL));
-            return;
-        }
-        fp_dbg ("Storing to FID slot %d", self->fid);
-        /* CMD 0x06 0x01 fid_hi fid_lo */
+        /* self->fid was set during pre-enrollment ReadIndex or after Empty */
         cmd[0] = MA_CMD_STORE_CHAR;
         cmd[1] = 0x01;
         cmd[2] = (guint8)(self->fid >> 8);
         cmd[3] = (guint8)(self->fid & 0xFF);
         ma_submit_cmd (ssm, device, cmd, 4);
         break;
-    }
 
     case ENROLL_RECV_STORE_CHAR:
         ma_submit_recv (ssm, device, MA_OVERHEAD + 3 + 2);

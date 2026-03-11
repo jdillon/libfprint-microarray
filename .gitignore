@@ -1,0 +1,15 @@
+# Build outputs tracked explicitly in build/
+# Ignore everything else that might land here
+*.o
+*.a
+*.so.*
+*.log
+!build/libfprint-2.so.2.0.0
+!docs/fprintd.log
+
+# Editor and OS noise
+.DS_Store
+*~
+*.swp
+*.swo
+.vscode/

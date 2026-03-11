@@ -662,3 +662,678 @@ libfprint-microarray-Message: 21:59:44.487: microarray: ENROLL_STORE_CHAR: ReadI
 (fprintd:34629): fprintd-DEBUG: 22:08:03.146: Authorization granted to :1.334 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
 (fprintd:34629): fprintd-DEBUG: 22:08:03.146: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
 (fprintd:34629): fprintd-DEBUG: 22:08:03.146: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:16.971: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:16.971: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:16.981: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:16.981: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:16.981: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:16.982: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:16.982: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:16.997: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:16.997: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:16.998: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.000: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.001: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.011: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.011: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.011: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.011: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.011: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.017: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.017: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.017: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.017: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.017: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.024: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.025: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.025: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.026: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.027: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.048: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.048: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.048: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.049: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.049: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.058: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.058: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.058: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.059: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.059: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.076: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.076: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.076: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.077: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.077: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.086: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.086: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.086: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.087: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.091: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.107: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.107: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.107: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.107: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.108: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.117: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.117: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.118: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:20:17.129: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.131: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:20:17.151: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:20:17.151: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:20:17.151: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.021: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.022: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.040: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.040: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.040: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.042: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.043: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.048: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.048: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.048: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.048: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.048: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.053: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.053: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.053: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.054: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.054: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.067: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.067: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.067: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.069: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.070: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.085: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.085: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.085: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.085: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.085: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.105: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.105: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.105: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.109: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.110: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.119: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.119: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.119: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.119: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.119: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.138: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.138: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.138: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.139: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.139: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.149: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.150: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.150: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.153: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.154: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.167: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.167: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.167: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.168: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.168: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.176: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.176: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.176: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:21:12.181: Requesting authorization from :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.181: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:21:12.196: Authorization granted to :1.347 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:21:12.196: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:21:12.196: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:06.082: Requesting authorization from :1.373 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:06.082: Getting authorization to perform Polkit action net.reactivated.fprint.device.setusername
+(fprintd:34629): fprintd-DEBUG: 22:41:06.083: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:06.084: Authorization granted to :1.373 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:06.084: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:41:06.085: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:06.085: Requesting authorization from :1.373 to call method 'Claim' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:06.085: Getting authorization to perform Polkit action net.reactivated.fprint.device.setusername
+(fprintd:34629): fprintd-DEBUG: 22:41:06.086: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:06.088: Authorization granted to :1.373 to call method 'Claim' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:06.088: user 'jason' claiming the device: 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.182: [microarray] INIT_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.182: [microarray] INIT_NUM_STATES entering state 1
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.188: Handshake OK
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.188: [microarray] INIT_NUM_STATES completed successfully
+(fprintd:34629): libfprint-device-DEBUG: 22:41:06.188: Device reported open completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:06.188: Completing action FPI_DEVICE_ACTION_OPEN in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:06.188: Updated temperature model after 2190.67 seconds, ratio 0.18 -> 0.00, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:06.188: claimed device 0
+(fprintd:34629): fprintd-DEBUG: 22:41:06.190: Requesting authorization from :1.373 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:06.190: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:06.191: Authorization granted to :1.373 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:06.191: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:41:06.191: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:06.191: start verification device 0 finger right-index-finger
+(fprintd:34629): libfprint-device-DEBUG: 22:41:06.191: Updated temperature model after 0.00 seconds, ratio 0.00 -> 0.00, active 1 -> 1, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.192: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.192: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.227: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.227: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.227: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.228: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.257: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.257: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.257: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.257: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.287: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.287: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.287: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.289: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.317: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.317: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.317: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.320: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.357: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.357: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.357: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.357: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.396: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.397: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.397: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.397: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.426: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.426: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.427: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.427: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.466: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.466: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.466: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.466: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.496: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.496: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.496: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.496: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.526: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.526: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.526: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.526: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.566: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.566: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.566: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.566: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.595: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.596: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.596: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.596: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.625: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.625: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.625: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.625: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.655: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.655: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.655: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.655: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.685: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.685: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.685: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.685: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.715: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.715: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.715: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.715: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.745: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.745: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.745: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.745: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.775: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.775: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.775: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.775: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.805: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.805: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.805: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.805: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.834: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.834: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.834: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.835: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.864: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.864: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.864: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.864: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.894: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.894: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.894: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.894: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.924: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.924: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.924: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.924: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.954: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.954: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.954: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.954: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.984: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:06.984: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.984: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:06.984: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.014: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.014: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.014: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.014: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.043: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.043: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.043: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.044: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.073: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.073: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.073: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.073: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.103: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.103: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.103: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.103: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.133: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.133: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.133: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.133: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.163: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.163: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.163: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.163: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.193: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.193: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.193: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.193: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.223: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.223: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.223: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.223: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.253: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.253: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.253: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.253: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.282: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.283: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.283: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.283: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.322: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.322: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.323: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.323: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.362: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.362: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.362: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.362: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.392: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.392: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.392: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.392: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.422: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.422: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.422: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.422: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.452: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.452: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.452: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.452: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.481: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.482: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.482: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.482: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.511: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.511: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.512: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.512: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.551: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.551: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.551: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.551: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.581: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.581: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.581: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.581: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.611: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.611: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.611: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.611: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.641: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.641: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.641: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.641: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.671: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.671: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.671: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.671: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.701: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.701: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.701: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.701: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.730: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.730: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.730: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.730: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.760: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.760: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.760: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.760: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.790: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.790: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.790: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.790: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.820: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.820: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.820: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.820: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.850: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:07.850: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.850: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:07.850: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.118: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.118: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(fprintd:34629): fprintd-DEBUG: 22:41:08.118: Finger present 1
+(fprintd:34629): fprintd-DEBUG: 22:41:08.118: Finger needed 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.118: [microarray] VERIFY_NUM_STATES entering state 3
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.196: [microarray] VERIFY_NUM_STATES entering state 4
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.196: [microarray] VERIFY_NUM_STATES entering state 5
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.208: [microarray] VERIFY_NUM_STATES completed successfully
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.208: Device reported finger status change: FP_FINGER_STATUS_NONE
+(fprintd:34629): fprintd-DEBUG: 22:41:08.208: Finger present 0
+(fprintd:34629): fprintd-DEBUG: 22:41:08.208: Finger needed 0
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:08.208: Search result: 0x01 (no match)
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.208: Device reported verify result
+(fprintd:34629): fprintd-DEBUG: 22:41:08.208: report_verify_status: result verify-no-match
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.208: Device reported verify completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.208: Completing action FPI_DEVICE_ACTION_VERIFY in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.208: Updated temperature model after 2.02 seconds, ratio 0.00 -> 0.01, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:08.208: verify_cb: result verify-no-match
+(fprintd:34629): fprintd-DEBUG: 22:41:08.209: Requesting authorization from :1.373 to call method 'VerifyStop' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:08.209: Authorization granted to :1.373 to call method 'VerifyStop' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:08.210: Requesting authorization from :1.373 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:08.210: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:08.212: Authorization granted to :1.373 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:08.212: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:41:08.212: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:08.212: start verification device 0 finger right-index-finger
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.212: Updated temperature model after 0.00 seconds, ratio 0.01 -> 0.01, active 1 -> 1, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.212: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.213: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.265: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.265: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(fprintd:34629): fprintd-DEBUG: 22:41:08.265: Finger present 1
+(fprintd:34629): fprintd-DEBUG: 22:41:08.265: Finger needed 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.266: [microarray] VERIFY_NUM_STATES entering state 3
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.346: [microarray] VERIFY_NUM_STATES entering state 4
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.346: [microarray] VERIFY_NUM_STATES entering state 5
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:08.415: [microarray] VERIFY_NUM_STATES completed successfully
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.415: Device reported finger status change: FP_FINGER_STATUS_NONE
+(fprintd:34629): fprintd-DEBUG: 22:41:08.415: Finger present 0
+(fprintd:34629): fprintd-DEBUG: 22:41:08.415: Finger needed 0
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.415: Device reported verify result
+(fprintd:34629): fprintd-DEBUG: 22:41:08.415: report_verify_status: result verify-match
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.415: Device reported verify completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.416: Completing action FPI_DEVICE_ACTION_VERIFY in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.416: Updated temperature model after 0.20 seconds, ratio 0.01 -> 0.02, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:08.416: verify_cb: result verify-match
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.416: Device reported close completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.416: Completing action FPI_DEVICE_ACTION_CLOSE in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:08.416: Updated temperature model after 0.00 seconds, ratio 0.02 -> 0.02, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:19.221: Requesting authorization from :1.377 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:19.221: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:19.240: Authorization granted to :1.377 to call method 'ListEnrolledFingers' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:19.241: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:41:19.241: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:19.246: Requesting authorization from :1.377 to call method 'Claim' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:19.246: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:19.262: Authorization granted to :1.377 to call method 'Claim' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:19.262: user 'jason' claiming the device: 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.357: [microarray] INIT_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.357: [microarray] INIT_NUM_STATES entering state 1
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.364: Handshake OK
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.364: [microarray] INIT_NUM_STATES completed successfully
+(fprintd:34629): libfprint-device-DEBUG: 22:41:19.364: Device reported open completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:19.364: Completing action FPI_DEVICE_ACTION_OPEN in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:19.364: Updated temperature model after 10.95 seconds, ratio 0.02 -> 0.02, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:19.364: claimed device 0
+(fprintd:34629): fprintd-DEBUG: 22:41:19.367: Requesting authorization from :1.377 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'
+(fprintd:34629): fprintd-DEBUG: 22:41:19.367: Getting authorization to perform Polkit action net.reactivated.fprint.device.verify
+(fprintd:34629): fprintd-DEBUG: 22:41:19.387: Authorization granted to :1.377 to call method 'VerifyStart' for device 'MicroarrayTechnology MAFP'!
+(fprintd:34629): fprintd-DEBUG: 22:41:19.387: file_storage_discover_prints() for user 'jason' in '/var/lib/fprint/jason/microarray/0'
+(fprintd:34629): fprintd-DEBUG: 22:41:19.388: file_storage_print_data_load(): loaded '/var/lib/fprint/jason/microarray/0/7' Success
+(fprintd:34629): fprintd-DEBUG: 22:41:19.388: start verification device 0 finger right-index-finger
+(fprintd:34629): libfprint-device-DEBUG: 22:41:19.388: Updated temperature model after 0.02 seconds, ratio 0.02 -> 0.02, active 1 -> 1, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.388: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.388: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.423: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.423: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.423: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.424: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.463: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.463: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.463: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.464: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.503: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.503: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.503: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.503: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.543: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.543: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.543: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.543: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.573: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.573: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.573: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.573: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.613: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.613: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.613: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.613: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.653: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.653: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.653: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.653: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.692: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.692: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.692: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.693: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.732: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.732: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.732: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.732: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.772: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.772: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.772: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.772: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.812: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.812: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.812: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.812: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.853: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.853: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.853: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.853: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.891: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.891: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.891: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.892: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.931: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.931: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.931: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.931: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.971: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:19.971: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.971: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:19.971: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.011: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.011: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.011: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.011: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.050: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.051: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.051: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.051: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.090: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.091: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.091: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.091: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.130: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.130: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.130: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.130: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.170: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.170: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.170: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.170: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.200: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.200: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.200: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.200: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.240: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.240: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.240: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.240: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.279: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.280: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.280: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.280: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.319: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.319: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.319: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.319: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.359: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.359: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.359: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.359: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.399: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.399: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.399: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.399: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.439: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.439: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.439: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.439: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.479: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.479: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.479: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.479: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.519: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.519: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.519: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.519: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.559: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.559: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.559: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.559: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.598: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.598: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.598: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.599: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.638: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.638: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.638: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.639: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.678: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.678: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.678: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.679: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.718: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.718: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.718: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.718: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.758: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.758: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.758: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.758: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.797: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.797: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.797: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.797: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.837: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.837: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.837: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.837: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.877: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.877: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.877: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.877: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.917: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.917: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.917: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.918: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.957: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.957: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.957: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.957: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.997: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:20.997: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.997: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:20.997: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.036: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.036: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.036: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.037: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.076: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.076: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.076: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.077: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.116: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.116: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.116: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.116: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.156: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.156: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.156: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.156: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.197: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.197: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.197: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.198: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.235: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.235: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.235: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.235: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.275: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.275: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.275: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.275: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.315: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.315: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.315: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.315: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.355: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.355: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.355: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.355: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.395: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.395: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.395: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.395: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.435: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.435: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.435: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.435: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.474: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.474: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.474: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.475: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.514: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.514: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.514: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.515: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.554: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-microarray-DEBUG: 22:41:21.554: GetImage not ready, retrying
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.554: [microarray] VERIFY_NUM_STATES entering state 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.555: [microarray] VERIFY_NUM_STATES entering state 1
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.633: [microarray] VERIFY_NUM_STATES entering state 2
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.633: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(fprintd:34629): fprintd-DEBUG: 22:41:21.634: Finger present 1
+(fprintd:34629): fprintd-DEBUG: 22:41:21.634: Finger needed 0
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.634: [microarray] VERIFY_NUM_STATES entering state 3
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.721: [microarray] VERIFY_NUM_STATES entering state 4
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.721: [microarray] VERIFY_NUM_STATES entering state 5
+(fprintd:34629): libfprint-SSM-DEBUG: 22:41:21.793: [microarray] VERIFY_NUM_STATES completed successfully
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.793: Device reported finger status change: FP_FINGER_STATUS_NONE
+(fprintd:34629): fprintd-DEBUG: 22:41:21.793: Finger present 0
+(fprintd:34629): fprintd-DEBUG: 22:41:21.793: Finger needed 0
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.793: Device reported verify result
+(fprintd:34629): fprintd-DEBUG: 22:41:21.793: report_verify_status: result verify-match
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.793: Device reported verify completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.793: Completing action FPI_DEVICE_ACTION_VERIFY in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.793: Updated temperature model after 2.41 seconds, ratio 0.02 -> 0.03, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
+(fprintd:34629): fprintd-DEBUG: 22:41:21.793: verify_cb: result verify-match
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.794: Device reported close completion
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.795: Completing action FPI_DEVICE_ACTION_CLOSE in idle!
+(fprintd:34629): libfprint-device-DEBUG: 22:41:21.795: Updated temperature model after 0.00 seconds, ratio 0.03 -> 0.03, active 0 -> 0, FP_TEMPERATURE_COLD -> FP_TEMPERATURE_COLD
