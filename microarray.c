@@ -433,12 +433,12 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
             }
         }
         if (self->fid >= 0) {
-            g_message ("microarray: FID slot %d free, skipping Empty", self->fid);
+            fp_dbg ("FID slot %d free, skipping Empty", self->fid);
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
         /* No free slots — erase all templates, use slot 0 */
-        g_message ("microarray: no free FID slots, clearing all templates (CMD 0x0D)");
+        fp_dbg ("no free FID slots, clearing all templates (CMD 0x0D)");
         self->fid = 0;
         cmd[0] = MA_CMD_EMPTY;
         ma_submit_cmd (ssm, device, cmd, 1);
@@ -507,11 +507,11 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
 
     case ENROLL_REG_MODEL:
         /* Check GenChar result and count sample */
-        g_message ("microarray: GenChar resp[0]=0x%02x stage=%d",
-                   self->resp_buf[MA_OVERHEAD], self->enroll_stage);
+        fp_dbg ("GenChar resp[0]=0x%02x stage=%d",
+                self->resp_buf[MA_OVERHEAD], self->enroll_stage);
         if (self->resp_buf[MA_OVERHEAD] == 0x00) {
             self->enroll_stage++;
-            g_message ("microarray: stage %d / %d OK", self->enroll_stage, MA_ENROLL_SAMPLES);
+            fp_dbg ("stage %d / %d OK", self->enroll_stage, MA_ENROLL_SAMPLES);
             fpi_device_enroll_progress (device, self->enroll_stage, NULL, NULL);
         } else {
             g_warning ("microarray: GenChar failed (0x%02x), retrying stage",
@@ -527,7 +527,7 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
             fpi_ssm_jump_to_state (ssm, ENROLL_GET_IMAGE);
             return;
         }
-        g_message ("microarray: all samples collected, sending RegModel (CMD 0x05)");
+        fp_dbg ("all samples collected, sending RegModel (CMD 0x05)");
         cmd[0] = MA_CMD_REG_MODEL;
         ma_submit_cmd (ssm, device, cmd, 1);
         break;
@@ -538,8 +538,8 @@ enroll_run_state (FpiSsm *ssm, FpDevice *device)
 
     case ENROLL_STORE_CHAR:
         /* Check RegModel result */
-        g_message ("microarray: RegModel resp[0]=0x%02x, storing to FID slot %d",
-                   self->resp_buf[MA_OVERHEAD], self->fid);
+        fp_dbg ("RegModel resp[0]=0x%02x, storing to FID slot %d",
+                self->resp_buf[MA_OVERHEAD], self->fid);
         if (self->resp_buf[MA_OVERHEAD] != 0x00) {
             g_warning ("microarray: RegModel FAILED with 0x%02x",
                        self->resp_buf[MA_OVERHEAD]);
