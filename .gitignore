@@ -1,10 +1,12 @@
-# Build outputs tracked explicitly in build/
-# Ignore everything else that might land here
-*.o
-*.a
-*.so.*
+# Build outputs — not tracked
+build/
+
+# Reverse engineering artifacts — proprietary, not tracked
+# See docs/reverse-engineering.md for how to reproduce
+re/
+
+# Logs except the reference one in docs/
 *.log
-!build/libfprint-2.so.2.0.0
 !docs/fprintd.log
 
 # Editor and OS noise
