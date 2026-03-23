@@ -48,14 +48,10 @@ See [Reverse Engineering](docs/reverse-engineering.md) for how to reproduce.
 ## Build
 
 ```bash
-# In the libfprint source tree (~/libfprint):
-cp src/microarray.c libfprint/drivers/microarray/microarray.c
-ninja -C build libfprint/libfprint-2.so.2.0.0
-sudo cp build/libfprint/libfprint-2.so.2.0.0 /usr/lib64/libfprint-2.so.2.0.0
-
-# Or use the build script:
 ./build.sh
 ```
+
+Copies `src/microarray.c` into the libfprint source tree (`$LIBFPRINT_SRC`, defaults to `~/libfprint`), builds with ninja, and installs the shared library.
 
 ## Testing
 
