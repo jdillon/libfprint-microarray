@@ -4,6 +4,12 @@
 
 Enrollment and verify confirmed working on real hardware (2026-03-10).
 
+## Hardware
+
+[TNP Nano USB Fingerprint Reader](https://www.amazon.com/dp/B07DW62XS7)
+
+<img src="docs/tnp-nano-usb-fingerprint-reader.jpg" width="200" alt="TNP Nano USB Fingerprint Reader" />
+
 Protocol fully reverse-engineered from `MicroarrayFingerprintDevice.dll` v9.47.11.214
 using Ghidra 12.0.4 headless analysis.
 
