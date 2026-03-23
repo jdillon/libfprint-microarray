@@ -66,6 +66,23 @@ fprintd-verify -f right-index-finger
 sudo G_MESSAGES_DEBUG=all /usr/libexec/fprintd -t 2>&1
 ```
 
+## License
+
+[MIT](LICENSE)
+
+## Legal
+
+This driver was created by reverse engineering the proprietary Windows driver
+(`MicroarrayFingerprintDevice.dll`) for the sole purpose of hardware interoperability on Linux.
+No proprietary code is included — the driver is an independent implementation of the USB protocol.
+
+Reverse engineering for interoperability is protected under:
+
+- **US:** DMCA §1201(f) — software interoperability exemption
+- **EU:** Software Directive Article 6 — decompilation for interoperability
+
+See [Reverse Engineering](docs/reverse-engineering.md) for full details on the analysis methodology.
+
 ## Protocol Reference
 
 See [Protocol Documentation](docs/fingerprint-driver-re.md) for full protocol details.
