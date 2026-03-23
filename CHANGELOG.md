@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-03-23
+
 ### Added
 
 - Full libfprint driver for MicroarrayTechnology MAFP (USB 3274:8012) fingerprint sensor
@@ -19,3 +21,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skip unnecessary flash clears when free FID slots are available
 - Full protocol documentation from Windows driver reverse engineering
 - MIT license
+
+[1.0.0]: https://github.com/jdillon/libfprint-microarray/releases/tag/v1.0.0
