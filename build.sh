@@ -3,7 +3,7 @@
 # Run from anywhere; finds the libfprint source tree automatically.
 set -euo pipefail
 
-DRIVER_SRC="$(dirname "$(realpath "$0")")/microarray.c"
+DRIVER_SRC="$(dirname "$(realpath "$0")")/src/microarray.c"
 LIBFPRINT_SRC="${LIBFPRINT_SRC:-$HOME/libfprint}"
 DEST="$LIBFPRINT_SRC/libfprint/drivers/microarray/microarray.c"
 BUILD="$LIBFPRINT_SRC/build"
